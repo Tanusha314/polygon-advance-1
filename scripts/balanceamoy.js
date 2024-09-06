@@ -9,7 +9,7 @@ async function main() {
   try {
     const token = await hre.ethers.getContractAt(tokenABI, tokenAddress);
     const balance = await token.balanceOf(walletAddress);
-    console.log(`You now have: 5 NFTs in your wallet`);
+    console.log(`You now have: ${balance} NFTs in your wallet`);
   } catch (error) {
     console.error(error);
     process.exitCode = 1;
